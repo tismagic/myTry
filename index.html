@@ -236,6 +236,7 @@
                         e.preventDefault();
                     })
 
+					/*
                     $('#button').on('touchstart', function () {
 
                         if (!state) {
@@ -252,6 +253,25 @@
                             $('#result').html(total + ' 次');
                         }
                         this.classList.remove('active');
+                    });
+                    */
+                    
+                    $('#button').on('touchstart', function () {
+
+                        if (!state) {
+                            state = 1;
+                            counter = setInterval(timer, 10);
+                        }
+
+                        
+                    });
+
+                    $('#button').on('touchend', function () {
+                        if (state) {
+                            total++;
+                            $('#result').html(total + ' 次');
+                        }
+                        
                     });
 
                     // $('#stop').on('click', function () {
