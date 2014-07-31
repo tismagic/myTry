@@ -263,7 +263,7 @@
                     });
                     */
                     
-                    $('#button').on('vmousedown', function () {
+                    $('#button').on('touchstart', function () {
 
                         if (!state) {
                             state = 1;
@@ -273,7 +273,7 @@
 
                     });
 
-                    $('#button').on('vmouseup', function () {
+                    $('#button').on('touchend', function () {
                         if (state) {
                             total++;
                             $('#result').html(total + ' 次');
